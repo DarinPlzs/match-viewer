@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Match Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🏆 Match Viewer</h1>
+
+<div class="container">
+  <div id="blueTeam" class="team blue"></div>
+  <div id="redTeam" class="team red"></div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const matchId = params.get("id");
+
+if (!matchId) {
+  document.body.innerHTML = "<h1>❌ No match id</h1>";
+  throw new Error("No match id");
+}
+
+// 🔥 helper: แปลงชื่อไฟล์ (ลบช่องว่าง)
+function formatName(name) {
+  return name.replace(/\s+/g, "");
+}
+
+fetch(`data/matches/${matchId}.json`)
+  .then(res => res.json())
+  .then(data => {
+
+    const blue = data.players.filter(p => p.team.trim().toLowerCase() === "blue");
+    const red = data.players.filter(p => p.team.trim().toLowerCase() === "red");
+
+    // 👑 MVP
+    const mvp = data.players.reduce((a, b) =>
+      (a.kda.kills > b.kda.kills ? a : b)
+    );
+
+    function renderTeam(team, elementId, teamName, gold) {
+      const el = document.getElementById(elementId);
+
+      if (team.length === 0) {
+        el.innerHTML = "<p>No data</p>";
+        return;
+      }
+
+      el.innerHTML = `
+        <div class="header">
+          <h2>${teamName}</h2>
+          <div class="gold">💰 Gold: ${gold}</div>
+        </div>
+      `;
+
+      team.forEach(p => {
+        const isMVP = p.player_id === mvp.player_id;
+
+        const heroImg = `assets/heroes/${formatName(p.hero)}.png`;
+
+        const itemsHTML = p.items
+          .filter(i => i)
+          .map(i => {
+            const itemImg = `assets/items/${formatName(i)}.png`;
+            return `
+              <img src="${itemImg}" width="26" height="26"
+              onerror="this.src='assets/items/default.png'">
+            `;
+          })
+          .join("");
+
+        el.innerHTML += `
+          <div class="player ${isMVP ? 'mvp' : ''}">
+
+            <div class="top">
+              <div class="hero-block">
+
+                <img src="${heroImg}" width="36" height="36"
+                onerror="this.src='assets/heroes/default.png'">
+
+                <div>
+                  <div class="name">${p.name}</div>
+                  <div class="hero">${p.hero}</div>
+                </div>
+
+              </div>
+
+              <div class="kda">
+                ${p.kda.kills}/${p.kda.deaths}/${p.kda.assists}
+              </div>
+            </div>
+
+            <div class="items">
+              ${itemsHTML}
+            </div>
+
+          </div>
+        `;
+      });
+    }
+
+    renderTeam(
+      blue,
+      "blueTeam",
+      "🔵 BLUE TEAM",
+      data.team_summary.blue.gold
+    );
+
+    renderTeam(
+      red,
+      "redTeam",
+      "🔴 RED TEAM",
+      data.team_summary.red.gold
+    );
+
+  })
+  .catch(err => {
+    console.error(err);
+    document.body.innerHTML = "<h1>❌ Error loading match</h1>";
+  });
+</script>
+
+</body>
+</html>
