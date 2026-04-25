@@ -1,0 +1,269 @@
+{
+	"match_id": "match_20260421_130458",
+	"phase": "gameplay",
+	"timestamp": "2026-04-21T06:06:29Z",
+	"duration_seconds": 90,
+	"banned_heroes": [
+		"Zephys",
+		"The Flash",
+		"Grakk",
+		"Arum",
+		"Murad",
+		"Billow",
+		"Sinestrea",
+		"Alice"
+	],
+	"players": [
+		{
+			"player_id": 1,
+			"team": "blue",
+			"name": "Player 1",
+			"hero": "Florentino",
+			"alive": true,
+			"kda": {
+				"kills": 2,
+				"deaths": 8,
+				"assists": 2
+			},
+			"gold": 4961,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Leviathan",
+				"Gilded greaves",
+				"Death sickle",
+				"Talisman of strength",
+				"Gladiatior Gauntlets",
+				null
+			]
+		},
+		{
+			"player_id": 2,
+			"team": "blue",
+			"name": "Player 2",
+			"hero": "Ming",
+			"alive": true,
+			"kda": {
+				"kills": 4,
+				"deaths": 5,
+				"assists": 5
+			},
+			"gold": 7118,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"War boots",
+				"Claves sancti",
+				"Slikk s sting",
+				"Fafnir s talon",
+				"Dagger",
+				null
+			]
+		},
+		{
+			"player_id": 3,
+			"team": "blue",
+			"name": "Player 3",
+			"hero": "Laville",
+			"alive": true,
+			"kda": {
+				"kills": 4,
+				"deaths": 5,
+				"assists": 5
+			},
+			"gold": 7121,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"War boots",
+				"Claves sancti",
+				"Slikk s sting",
+				"Frost Guard",
+				null,
+				null
+			]
+		},
+		{
+			"player_id": 4,
+			"team": "blue",
+			"name": "Player 4",
+			"hero": "Lorion",
+			"alive": true,
+			"kda": {
+				"kills": 1,
+				"deaths": 7,
+				"assists": 1
+			},
+			"gold": 6837,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Berith Agony",
+				"Gilded greaves",
+				"Tome of the reaper",
+				"Short Sword",
+				"Short Sword",
+				null
+			]
+		},
+		{
+			"player_id": 5,
+			"team": "blue",
+			"name": "Player 5",
+			"hero": "Wiro",
+			"alive": true,
+			"kda": {
+				"kills": 1,
+				"deaths": 8,
+				"assists": 9
+			},
+			"gold": 490,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Fire Gem",
+				"Gilded greaves",
+				"Hecate s diadem",
+				"Spell Tome",
+				null,
+				null
+			]
+		},
+		{
+			"player_id": 6,
+			"team": "red",
+			"name": "Player 6",
+			"hero": "Preyta",
+			"alive": true,
+			"kda": {
+				"kills": 7,
+				"deaths": 3,
+				"assists": 12
+			},
+			"gold": 7497,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Enchanted kicks",
+				"Zweihander",
+				"Bloodthirsty Blade",
+				"Hecate s diadem",
+				"Spell Tome",
+				"Spell Tome"
+			]
+		},
+		{
+			"player_id": 7,
+			"team": "red",
+			"name": "Player 7",
+			"hero": "Violet",
+			"alive": true,
+			"kda": {
+				"kills": 4,
+				"deaths": 2,
+				"assists": 13
+			},
+			"gold": 7804,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"War boots",
+				"Claves sancti",
+				"Rankbreaker",
+				"Omni Arms",
+				"Short Sword",
+				"Short Sword"
+			]
+		},
+		{
+			"player_id": 8,
+			"team": "red",
+			"name": "Player 8",
+			"hero": "Keera",
+			"alive": true,
+			"kda": {
+				"kills": 12,
+				"deaths": 9,
+				"assists": 6
+			},
+			"gold": 9616,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Loki s curse",
+				"Enchanted kicks",
+				"Zweihander",
+				"Holy of Holies",
+				"Staff of nuul",
+				null
+			]
+		},
+		{
+			"player_id": 9,
+			"team": "red",
+			"name": "Player 9",
+			"hero": "Biron",
+			"alive": true,
+			"kda": {
+				"kills": 3,
+				"deaths": 2,
+				"assists": 3
+			},
+			"gold": 7253,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Gilded greaves",
+				"Rankbreaker",
+				"Omni Arms",
+				"Cleaving claymore",
+				"Cleaving claymore",
+				null
+			]
+		},
+		{
+			"player_id": 10,
+			"team": "red",
+			"name": "Player 10",
+			"hero": "Unknown",
+			"alive": true,
+			"kda": {
+				"kills": 6,
+				"deaths": 4,
+				"assists": 20
+			},
+			"gold": 7329,
+			"damage_dealt": 0,
+			"damage_taken": 0,
+			"teamfight_participation": 0,
+			"items": [
+				"Fire Gem",
+				"Flashy boots",
+				"Berith Agony",
+				"Frost Guard",
+				"Spell Tome",
+				null
+			]
+		}
+	],
+	"team_summary": {
+		"blue": {
+			"kills": 12,
+			"gold": 26527
+		},
+		"red": {
+			"kills": 32,
+			"gold": 39499
+		}
+	}
+}
+
