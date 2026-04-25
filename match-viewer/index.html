@@ -1,1 +1,107 @@
-﻿<a href="match.html?id=match_001">ดู Match 001</a>
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Esports Match Hub</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .match-list {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .match-card {
+      padding: 15px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1f2937, #111827);
+      cursor: pointer;
+      transition: 0.2s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .match-card:hover {
+      transform: scale(1.03);
+      background: linear-gradient(135deg, #374151, #1f2937);
+    }
+
+    .match-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .match-sub {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 6px 10px;
+      background: #2563eb;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 13px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<h1 class="title">🎮 Match Viewer Hub</h1>
+
+<div class="match-list" id="matchList"></div>
+
+<script>
+
+// 🧠 ใส่ list แมตช์ตรงนี้
+const matches = [
+  {
+    id: "match_20260421_130458",
+    title: "Match 1",
+    subtitle: "Round 1"
+  },
+  {
+    id: "match_002",
+    title: "Match 2",
+    subtitle: "Semi Final"
+  },
+  {
+    id: "match_003",
+    title: "Match 3",
+    subtitle: "Final"
+  }
+];
+
+// 🎯 render list
+const list = document.getElementById("matchList");
+
+matches.forEach(m => {
+  list.innerHTML += `
+    <div class="match-card" onclick="goMatch('${m.id}')">
+      <div class="match-title">${m.title}</div>
+      <div class="match-sub">${m.subtitle}</div>
+      <div class="btn">View Match →</div>
+    </div>
+  `;
+});
+
+// 🔗 ไปหน้า match
+function goMatch(id) {
+  window.location.href = `match.html?id=${id}`;
+}
+
+</script>
+
+</body>
+</html>
