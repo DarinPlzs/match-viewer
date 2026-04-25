@@ -60,15 +60,15 @@ fetch(`data/matches/${matchId}.json`)
       team.forEach(p => {
         const isMVP = p.player_id === mvp.player_id;
 
-        const heroImg = `assets/heroes/${formatName(p.hero)}.png`;
+        const heroImg = `Assets/heroes/${formatName(p.hero)}.png`;
 
         const itemsHTML = p.items
           .filter(i => i)
           .map(i => {
-            const itemImg = `assets/items/${formatName(i)}.png`;
+            const itemImg = `Assets/items/${formatName(i)}.png`;
             return `
               <img src="${itemImg}" width="26" height="26"
-              onerror="this.src='assets/items/default.png'">
+              onerror="this.src='Assets/items/default.png'">
             `;
           })
           .join("");
@@ -80,7 +80,7 @@ fetch(`data/matches/${matchId}.json`)
               <div class="hero-block">
 
                 <img src="${heroImg}" width="36" height="36"
-                onerror="this.src='assets/heroes/default.png'">
+                onerror="this.src='Assets/heroes/default.png'">
 
                 <div>
                   <div class="name">${p.name}</div>
